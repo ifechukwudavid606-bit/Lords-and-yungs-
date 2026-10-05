@@ -1,0 +1,12 @@
+{
+  "name": "yung-and-lords-store",
+  "version": "1.0.0",
+  "description": "YUNG AND LORDS STORE",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
