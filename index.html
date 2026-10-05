@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YUNG AND LORDS STORE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">YUNG AND LORDS STORE</div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<aside id="sideMenu" class="side-menu">
+  <button class="close-btn" onclick="toggleMenu()">×</button>
+  <button onclick="showAdminLogin()">ADMIN</button>
+  <a href="https://whatsapp.com/channel/0029Vb92qWY3bbUvzepOFW3J" target="_blank">
+    WHATSAPP CHANNEL
+  </a>
+  <button onclick="alert('Telegram link will be added soon.')">TELEGRAM</button>
+</aside>
+
+<main>
+
+  <section class="hero">
+    <h1>YUNG AND LORDS STORE</h1>
+    <p>CPM INJECTOR STORE</p>
+    <p class="note">We sell CPM injectors, not CPM accounts.</p>
+  </section>
+
+  <section>
+    <h2>PRODUCTS</h2>
+    <div id="products" class="product-grid"></div>
+  </section>
+
+  <section id="paymentSection" class="panel hidden">
+    <h2>MAKE PAYMENT</h2>
+    <p>Transfer the exact amount to:</p>
+
+    <div class="bank-box">
+      <p><strong>Account Name:</strong> ALAEMEKA IFECHUKWU DAVID</p>
+      <p><strong>Bank:</strong> MONIIEPOINT</p>
+      <p><strong>Account Number:</strong> 7068046997</p>
+    </div>
+
+    <button class="primary" onclick="showPaymentForm()">
+      I HAVE MADE PAYMENT
+    </button>
+  </section>
+
+  <section id="paymentForm" class="panel hidden">
+    <h2>SUBMIT PAYMENT</h2>
+
+    <input
+      id="customerName"
+      placeholder="Transaction name / Customer name"
+    >
+
+    <input
+      id="transactionId"
+      placeholder="Transaction ID / Reference"
+    >
+
+    <button class="primary" onclick="submitPayment()">
+      SUBMIT PAYMENT
+    </button>
+
+    <p id="formMessage"></p>
+  </section>
+
+  <section id="statusSection" class="panel hidden">
+    <h2>ORDER STATUS</h2>
+
+    <p>
+      <strong>Order ID:</strong>
+      <span id="orderId"></span>
+    </p>
+
+    <p>
+      <strong>Product:</strong>
+      <span id="statusProduct"></span>
+    </p>
+
+    <p>
+      <strong>Payment:</strong>
+      <span id="paymentStatus" class="status">
+        PENDING REQUEST
+      </span>
+    </p>
+
+    <p>
+      <strong>Injection:</strong>
+      <span id="injectionStatus" class="status">
+        WAITING
+      </span>
+    </p>
+  </section>
+
+  <section id="adminLogin" class="panel hidden">
+    <h2>ADMIN ACCESS</h2>
+
+    <input
+      id="adminKey"
+      type="password"
+      maxlength="15"
+      placeholder="15-character admin key"
+    >
+
+    <button class="primary" onclick="adminLogin()">
+      LOGIN
+    </button>
+
+    <p id="adminMessage"></p>
+  </section>
+
+  <section id="adminDashboard" class="panel hidden">
+    <div class="admin-head">
+      <h2>ADMIN DASHBOARD</h2>
+      <button onclick="closeAdmin()">CLOSE</button>
+    </div>
+
+    <div id="adminOrders"></div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>
